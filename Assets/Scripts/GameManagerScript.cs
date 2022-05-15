@@ -34,7 +34,7 @@ public GameObject rendaSound;
             timer = 0;
             timerText.text = timer.ToString("f2");
             PlayerPrefs.SetInt("Score", count);
-            SceneManager.LoadScene("EndScene"); //この部分を追加
+            SceneManager.LoadScene("EndScene");
         }
     }
 
@@ -43,11 +43,11 @@ public GameObject rendaSound;
         if (isPlaying == true)
         {
             count += 1;
-            //count ++;でも同じ意味になる
+        
             countText.text = count.ToString();
             Debug.Log(count);
             GameObject rendaSoundClone = Instantiate(rendaSound)as GameObject;    //ここを追加
-            Destroy(rendaSoundClone, 3.0f);    //ここを追加
+            Destroy(rendaSoundClone, 3.0f);
         }
         else
         {
